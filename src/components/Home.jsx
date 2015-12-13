@@ -8,7 +8,9 @@ export const Home = React.createClass({
 
   render: function() {
     return (
-      <div >Hello world</div>
+      <div>
+        <div >Hello world</div>
+      </div>
     )
   }
 })
