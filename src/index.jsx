@@ -8,6 +8,7 @@ import {setState} from './action_creators'
 import reducer from './reducer'
 import App from 'components/App'
 import {HomeContainer} from 'components/Home'
+import {AboutContainer} from 'components/About'
 
 let store = createStore(reducer)
 setState()
@@ -18,6 +19,7 @@ const history = createHistory({
 
 const routes = <Route component={App}>
   <Route path="/" component={HomeContainer} />
+  <Route path="/about" component={AboutContainer} />
 </Route>
 
 ReactDOM.render(
