@@ -2,13 +2,14 @@ import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {connect} from 'react-redux'
 import * as actionCreators from '../action_creators'
+import styles from 'styles/base'
 
 export const Navbar = React.createClass({
   mixins: [PureRenderMixin],
 
   render: function() {
     return (
-      <nav className="navbar navbar-inverse">
+      <nav className="navbar navbar-color">
         <div className="container">
           <a className="navbar-brand" href="#/">Andrew Bethel</a>
           <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="bs-example-navbar-collapse-1">

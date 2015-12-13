@@ -16,12 +16,17 @@ var config = {
       test: /\.jsx?$/,
       loader: 'babel',
       exclude: [nodeModulesPath]
+    },
+    {
+      test: /\.less$/,
+      loader: 'style!css!less'
     }]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['', '.js', '.jsx', '.less'],
     alias: {
       components: path.join(__dirname, 'src', 'components'),
+      styles: path.join(__dirname, 'styles')
     }
   }
 };
