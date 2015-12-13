@@ -9,11 +9,6 @@ import reducer from './reducer'
 import App from 'components/App'
 import {HomeContainer} from 'components/Home'
 
-const unifiedReducer = combineReducers({
-  router: routerStateReducer,
-  app: reducer
-})
-
 let store = createStore(reducer)
 setState()
 
