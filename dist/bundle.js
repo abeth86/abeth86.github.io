@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d2393a239ca5cc9e1e1e"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "30371040204a5c27d83d"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -8034,6 +8034,10 @@
 
 	var _reactRouter2 = _interopRequireDefault(_reactRouter);
 
+	var _createHashHistory = __webpack_require__(247);
+
+	var _createHashHistory2 = _interopRequireDefault(_createHashHistory);
+
 	var _redux = __webpack_require__(293);
 
 	var _reactRedux = __webpack_require__(302);
@@ -8052,8 +8056,17 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var unifiedReducer = combineReducers({
+	  router: routerStateReducer,
+	  app: _reducer2.default
+	});
+
 	var store = (0, _redux.createStore)(_reducer2.default);
 	(0, _action_creators.setState)();
+
+	var history = (0, _createHashHistory2.default)({
+	  queryKey: false
+	});
 
 	var routes = _react2.default.createElement(
 	  _reactRouter.Route,
@@ -8064,11 +8077,7 @@
 	_reactDom2.default.render(_react2.default.createElement(
 	  _reactRedux.Provider,
 	  { store: store },
-	  _react2.default.createElement(
-	    _reactRouter2.default,
-	    null,
-	    routes
-	  )
+	  _react2.default.createElement(_reactRouter2.default, { history: history, routes: routes })
 	), document.getElementById('app'));
 
 	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(311); if (makeExportsHot(module, __webpack_require__(139))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
