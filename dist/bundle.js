@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "30371040204a5c27d83d"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "e5ad4d50de98bfca1ab8"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -8054,12 +8054,9 @@
 
 	var _Home = __webpack_require__(317);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	var _About = __webpack_require__(321);
 
-	var unifiedReducer = combineReducers({
-	  router: routerStateReducer,
-	  app: _reducer2.default
-	});
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var store = (0, _redux.createStore)(_reducer2.default);
 	(0, _action_creators.setState)();
@@ -8071,7 +8068,8 @@
 	var routes = _react2.default.createElement(
 	  _reactRouter.Route,
 	  { component: _App2.default },
-	  _react2.default.createElement(_reactRouter.Route, { path: '/', component: _Home.HomeContainer })
+	  _react2.default.createElement(_reactRouter.Route, { path: '/', component: _Home.HomeContainer }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _About.AboutContainer })
 	);
 
 	_reactDom2.default.render(_react2.default.createElement(
@@ -39041,6 +39039,60 @@
 	}
 
 	module.exports = shallowCompare;
+
+/***/ },
+/* 321 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(77), RootInstanceProvider = __webpack_require__(85), ReactMount = __webpack_require__(87), React = __webpack_require__(139); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.AboutContainer = exports.About = undefined;
+
+	var _react = __webpack_require__(139);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactAddonsPureRenderMixin = __webpack_require__(318);
+
+	var _reactAddonsPureRenderMixin2 = _interopRequireDefault(_reactAddonsPureRenderMixin);
+
+	var _reactRedux = __webpack_require__(302);
+
+	var _action_creators = __webpack_require__(310);
+
+	var actionCreators = _interopRequireWildcard(_action_creators);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var About = exports.About = _react2.default.createClass({
+	  displayName: 'About',
+
+	  mixins: [_reactAddonsPureRenderMixin2.default],
+
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      'Generic about this website stuff'
+	    );
+	  }
+	});
+
+	function mapStateToProps(state) {
+	  return {};
+	}
+
+	var AboutContainer = exports.AboutContainer = (0, _reactRedux.connect)(mapStateToProps, actionCreators)(About);
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(311); if (makeExportsHot(module, __webpack_require__(139))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "About.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
 
 /***/ }
 /******/ ]);
