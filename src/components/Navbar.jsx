@@ -17,8 +17,7 @@ export const Navbar = React.createClass({
     }
     const homeSelected = (this.props.selected === "Home" ? selectedStyle : null)
     const aboutSelected = (this.props.selected === "About" ? selectedStyle : null)
-    console.log(homeSelected)
-
+    
     return (
       <nav className="navbar navbar-color">
         <div className="container">
