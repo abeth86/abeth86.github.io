@@ -4,3 +4,10 @@ export function setState(state) {
     state
   }
 }
+
+export function setSelected(selected) {
+  return {
+    type: 'SET_SELECTED',
+    selected
+  }
+}

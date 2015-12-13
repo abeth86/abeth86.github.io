@@ -8,7 +8,7 @@ export const Home = React.createClass({
 
   render: function() {
     return (
-      <div>
+      <div className="container">
         <div >Hello world</div>
       </div>
     )

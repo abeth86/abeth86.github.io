@@ -27,6 +27,7 @@
     "chai": "^3.4.1",
     "chai-immutable": "^1.5.3",
     "jsdom": "^7.0.2",
+    "json-loader": "^0.5.4",
     "less": "^2.5.3",
     "less-loader": "^2.2.2",
     "mocha": "^2.3.4",
