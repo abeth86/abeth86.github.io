@@ -3,20 +3,17 @@
   "version": "1.0.0",
   "description": "My personal git space",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js 'test/**/*.@(js|jsx)'",
     "start": "webpack-dev-server",
-    "prod": "webpack --config 'webpack.production.config.js' -p"
+    "build": "NODE_ENV=production webpack --config ./webpack.production.config.js -p --progress --profile --colors"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abeth86/abeth86.github.io.git"
   },
   "author": "Andrew Bethel",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/abeth86/abeth86.github.io/issues"
   },
@@ -39,6 +36,7 @@
   },
   "dependencies": {
     "css-loader": "^0.23.0",
+    "jquery": "^2.1.4",
     "less-loader": "^2.2.2",
     "react": "^0.14.3",
     "react-addons-pure-render-mixin": "^0.14.3",

@@ -18,6 +18,21 @@
           transition: @t;
 }
 
+.animation-name(@name) {
+  -webkit-animation-name: @name;
+     -moz-animation-name: @name;
+       -o-animation-name: @name;
+          animation-name: @name;
+}
+
+.animation-duration(@duration){
+  -webkit-animation-duration: @duration;
+     -moz-animation-duration: @duration;
+       -o-animation-duration: @duration;
+          animation-duration: @duration;
+
+}
+
 .grad(@startColor: #555, @endColor: #333) {
   background-color: @endColor;
   background-repeat: repeat-x;
