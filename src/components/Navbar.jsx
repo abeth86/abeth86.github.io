@@ -8,6 +8,7 @@ export const Navbar = React.createClass({
   mixins: [PureRenderMixin],
 
   _setSelected: function(e) {
+    const selected = e.target.innerText === 'Andrew Bethel' ? 'Home' : e.target.innerText
     this.props.setSelected(e.target.innerText)
   },
 
@@ -21,7 +22,7 @@ export const Navbar = React.createClass({
     return (
       <nav className="navbar navbar-color" role="navigation">
         <div className="container">
-          <a className="navbar-brand" href="#/">Andrew Bethel</a>
+          <a className="navbar-brand" href="#/" onClick={this._setSelected}>Andrew Bethel</a>
           <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span className="sr-only">Toggle navigation</span>
             <span className="icon-bar"></span>
@@ -30,7 +31,7 @@ export const Navbar = React.createClass({
           </button>
           <div id="bs-example-navbar-collapse-1" className="collapse navbar-collapse">
             <ul className="nav navbar-nav navbar-right">
-              <li class="active">
+              <li className="active">
                 <a href="#/" style={homeSelected} onClick={this._setSelected}>Home</a>
               </li>
               <li>
