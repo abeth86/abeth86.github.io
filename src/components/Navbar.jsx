@@ -17,20 +17,20 @@ export const Navbar = React.createClass({
     }
     const homeSelected = (this.props.selected === "Home" ? selectedStyle : null)
     const aboutSelected = (this.props.selected === "About" ? selectedStyle : null)
-    
+
     return (
-      <nav className="navbar navbar-color">
+      <nav className="navbar navbar-color" role="navigation">
         <div className="container">
           <a className="navbar-brand" href="#/">Andrew Bethel</a>
-          <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="navbar-collapse-1">
+          <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span className="sr-only">Toggle navigation</span>
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
           </button>
-          <div id="navbar-collapse-1" className="collapse navbar-collapse">
+          <div id="bs-example-navbar-collapse-1" className="collapse navbar-collapse">
             <ul className="nav navbar-nav navbar-right">
-              <li>
+              <li class="active">
                 <a href="#/" style={homeSelected} onClick={this._setSelected}>Home</a>
               </li>
               <li>
