@@ -8,7 +8,8 @@ export const Home = React.createClass({
   mixins: [PureRenderMixin],
 
   render: function() {
-    const narrowGridClass = 'col-xs-6 col-md-6 col-xs-offset-3 col-md-offset-3 '
+    const titleGridClass = 'col-xs-8 col-md-6 col-xs-offset-2 col-md-offset-3 s-home-title'
+    const iconsGridClass = 'col-xs-10 col-md-6 col-xs-offset-1 col-md-offset-3 s-home-icons'
     const wideGridClass= 'col-xs-6 col-md-4 '
     const wideOffset = 'col-xs-offset-3 col-md-offset-2 '
 
@@ -16,8 +17,8 @@ export const Home = React.createClass({
       <div className="s-home">
         <div className="container">
           <div className="row">
-            <div className={narrowGridClass + "s-home-title"}>abethel.io</div>
-            <div className={narrowGridClass + "s-home-icons"}>
+            <div className={titleGridClass}>abethel.io</div>
+            <div className={iconsGridClass}>
               <img className="skill-icon" src="/img/html5-min.png" />
               <img className="skill-icon" src="/img/css3-min.png" />
               <img className="skill-icon" src="/img/less-min.png" />
