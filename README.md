@@ -23,3 +23,7 @@ This will run webpack-dev-server and you'll be able to view content on localhost
 npm run build
 ```
 ..and this will bundle/minify the code in to the dist folder so you can use it in the real world.
+```
+npm test
+```
+This will run any tests.

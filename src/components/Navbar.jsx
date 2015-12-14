@@ -9,7 +9,7 @@ export const Navbar = React.createClass({
 
   _setSelected: function(e) {
     const selected = e.target.innerText === 'Andrew Bethel' ? 'Home' : e.target.innerText
-    this.props.setSelected(e.target.innerText)
+    this.props.setSelected(selected)
   },
 
   render: function() {
