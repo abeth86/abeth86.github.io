@@ -15,15 +15,17 @@ export const Home = React.createClass({
     return (
       <div className="s-home">
         <div className="container">
-          <div className={narrowGridClass + "s-home-title"}>abethel.io</div>
-          <div className={narrowGridClass + "s-home-icons"}>
-            <img className="skill-icon" src="/img/html5-min.png" />
-            <img className="skill-icon" src="/img/css3-min.png" />
-            <img className="skill-icon" src="/img/less-min.png" />
-            <img className="skill-icon" src="/img/es6-min.png" />
-            <img className="skill-icon" src="/img/reactjs-min.png" />
-            <img className="skill-icon" src="/img/angularjs-min.png" />
-            <img className="skill-icon" src="/img/nodejs-min.png" />
+          <div className="row">
+            <div className={narrowGridClass + "s-home-title"}>abethel.io</div>
+            <div className={narrowGridClass + "s-home-icons"}>
+              <img className="skill-icon" src="/img/html5-min.png" />
+              <img className="skill-icon" src="/img/css3-min.png" />
+              <img className="skill-icon" src="/img/less-min.png" />
+              <img className="skill-icon" src="/img/es6-min.png" />
+              <img className="skill-icon" src="/img/reactjs-min.png" />
+              <img className="skill-icon" src="/img/angularjs-min.png" />
+              <img className="skill-icon" src="/img/nodejs-min.png" />
+            </div>
           </div>
         </div>
         <div className="row">
