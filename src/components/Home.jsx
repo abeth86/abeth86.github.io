@@ -11,7 +11,7 @@ export const Home = React.createClass({
     return (
       <div className="s-home">
         <div className="container">
-          <div className="col-md-6 col-md-offset-3 s-home-title">abethel.io</div>
+          <div className="col-xs-6 col-md-6 col-md-offset-3 s-home-title">abethel.io</div>
         </div>
       </div>
     )
