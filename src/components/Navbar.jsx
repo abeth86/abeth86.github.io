@@ -13,20 +13,22 @@ export const Navbar = React.createClass({
   },
 
   render: function() {
-    const selectedStyle = {
-      borderBottom: '2px solid black'
-    }
-    const opacityStyle = {
-      opacity: '0.6'
-    }
-    const fontOverOpacity = {
-      color: 'black'
+    const style = {
+      selected: {
+        borderBottom: '2px solid black'
+      },
+      notOpaque: {
+        opacity: '0.6'
+      },
+      fontOverOpacity: {
+        color: 'black'
+      }
     }
 
-    const homeSelected = (this.props.selected === "Home" ? selectedStyle : null)
-    const aboutSelected = (this.props.selected === "About" ? selectedStyle : null)
-    const selectionOpacity = (this.props.selected === "About" ? opacityStyle : null)
-    const ifOpacityPresent = (selectionOpacity ? fontOverOpacity : null)
+    const homeSelected = (this.props.selected === "Home" ? style.selected : null)
+    const aboutSelected = (this.props.selected === "About" ? style.selected : null)
+    const selectionOpacity = (this.props.selected === "About" ? style.notOpaque : null)
+    const ifOpacityPresent = (selectionOpacity ? style.fontOverOpacity : null)
 
     return (
       <nav className="navbar navbar-color" style={selectionOpacity} role="navigation">
