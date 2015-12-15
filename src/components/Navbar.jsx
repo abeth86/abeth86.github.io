@@ -16,11 +16,15 @@ export const Navbar = React.createClass({
     const selectedStyle = {
       borderBottom: '2px solid black'
     }
+    const opacityStyle = {
+      opacity: '0.6'
+    }
     const homeSelected = (this.props.selected === "Home" ? selectedStyle : null)
     const aboutSelected = (this.props.selected === "About" ? selectedStyle : null)
+    const selectionOpacity = (this.props.selected === "About" ? opacityStyle : null)
 
     return (
-      <nav className="navbar navbar-color" role="navigation">
+      <nav className="navbar navbar-color" style={selectionOpacity} role="navigation">
         <div className="container">
           <a className="navbar-brand" href="#/" onClick={this._setSelected}>Andrew Bethel</a>
           <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
