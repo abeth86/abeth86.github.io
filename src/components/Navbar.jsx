@@ -19,9 +19,14 @@ export const Navbar = React.createClass({
     const opacityStyle = {
       opacity: '0.6'
     }
+    const fontOverOpacity = {
+      color: 'black'
+    }
+
     const homeSelected = (this.props.selected === "Home" ? selectedStyle : null)
     const aboutSelected = (this.props.selected === "About" ? selectedStyle : null)
     const selectionOpacity = (this.props.selected === "About" ? opacityStyle : null)
+    const ifOpacityPresent = (selectionOpacity ? fontOverOpacity : null)
 
     return (
       <nav className="navbar navbar-color" style={selectionOpacity} role="navigation">
@@ -36,10 +41,10 @@ export const Navbar = React.createClass({
           <div id="bs-example-navbar-collapse-1" className="collapse navbar-collapse">
             <ul className="nav navbar-nav navbar-right">
               <li className="active">
-                <a href="#/" style={homeSelected} onClick={this._setSelected}>Home</a>
+                <a href="#/" style={Object.assign({}, homeSelected, ifOpacityPresent)} onClick={this._setSelected}>Home</a>
               </li>
               <li>
-                <a href="#/about" style={aboutSelected} onClick={this._setSelected}>About</a>
+                <a href="#/about" style={Object.assign({}, aboutSelected, ifOpacityPresent)} onClick={this._setSelected}>About</a>
               </li>
             </ul>
           </div>
