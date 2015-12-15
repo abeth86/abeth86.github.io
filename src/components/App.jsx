@@ -5,7 +5,7 @@ export default React.createClass({
   render: function() {
     return (
       <div>
-        <NavbarContainer />
+        <NavbarContainer location={this.props.location.pathname}/>
         {this.props.children}
       </div>
     )

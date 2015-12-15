@@ -7,8 +7,14 @@ import styles from 'styles/base'
 export const Navbar = React.createClass({
   mixins: [PureRenderMixin],
 
+  componentWillMount: function() {
+    const selected = this.props.location === '/' ? 'home' : this.props.location.replace('/', '')
+    this.props.setSelected(selected)
+  },
+
   _setSelected: function(e) {
-    const selected = e.target.innerText === 'Andrew Bethel' ? 'Home' : e.target.innerText
+    console.log(e.target.id)
+    const selected = e.target.innerText === 'Andrew Bethel' ? 'home' : e.target.id
     this.props.setSelected(selected)
   },
 
@@ -25,9 +31,9 @@ export const Navbar = React.createClass({
       }
     }
 
-    const homeSelected = (this.props.selected === "Home" ? style.selected : null)
-    const aboutSelected = (this.props.selected === "About" ? style.selected : null)
-    const selectionOpacity = (this.props.selected === "About" ? style.notOpaque : null)
+    const homeSelected = (this.props.selected === "home" ? style.selected : null)
+    const aboutSelected = (this.props.selected === "about" ? style.selected : null)
+    const selectionOpacity = (this.props.selected === "about" ? style.notOpaque : null)
     const ifOpacityPresent = (selectionOpacity ? style.fontOverOpacity : null)
 
     return (
@@ -43,10 +49,10 @@ export const Navbar = React.createClass({
           <div id="bs-example-navbar-collapse-1" className="collapse navbar-collapse">
             <ul className="nav navbar-nav navbar-right">
               <li className="active">
-                <a href="#/" style={Object.assign({}, homeSelected, ifOpacityPresent)} onClick={this._setSelected}>Home</a>
+                <a id="home" href="#/" style={Object.assign({}, homeSelected, ifOpacityPresent)} onClick={this._setSelected}>Home</a>
               </li>
               <li>
-                <a href="#/about" style={Object.assign({}, aboutSelected, ifOpacityPresent)} onClick={this._setSelected}>About</a>
+                <a id="about" href="#/about" style={Object.assign({}, aboutSelected, ifOpacityPresent)} onClick={this._setSelected}>About</a>
               </li>
             </ul>
           </div>
