@@ -15,12 +15,19 @@ export const Portfolio = React.createClass({
   },
 
   render() {
+
     const wurlModal = (
       <Modal className="portfolio-modal" show={this.props.openedModal === "wurl"} onHide={this._closeModal}>
         <Modal.Header closeButton>
           <Modal.Title><img className="modal-img-long" src="/img/wurl-desc.png"/></Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <div className="s-portfolio-icons">
+            <img className="skill-icon" src="/img/html5-min.png" />
+            <img className="skill-icon" src="/img/css3-min.png" />
+            <img className="skill-icon" src="/img/asp-net.png" />
+            <img className="skill-icon" src="/img/angularjs-min.png" />
+          </div>
           <h4>All Aboard!</h4>
           <p>Wurl is a prototype event finder for travelers in a foreign land.  It was built in just over a week, and remains hosted as an example of rapidly produced truly full-stack application.  Feel free to <a href="http://www.getwurl.com">play with it</a>!</p>
         </Modal.Body>
@@ -32,6 +39,12 @@ export const Portfolio = React.createClass({
           <Modal.Title><img className="modal-img-long" src="/img/chimgur-desc.png"/></Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <div className="s-portfolio-icons">
+            <img className="skill-icon" src="/img/html5-min.png" />
+            <img className="skill-icon" src="/img/less-min.png" />
+            <img className="skill-icon" src="/img/reactjs-min.png" />
+            <img className="skill-icon" src="/img/nodejs-min.png" />
+          </div>
           <h4>GFW-Free Image Uploader</h4>
           <p>Chimgur was the brainchild of endless tomfoolery by the Chinese GFW when attempting to use Imgur.  It's a simple image uploader that was built specifically for the subreddit /r/China on <a href="http://www.reddit.com">Reddit</a>.  Anyone can use it, however, as long as you have a Reddit username.  Check it out <a href="http://chimgur.herokuapp.com">here</a>!</p>
         </Modal.Body>
