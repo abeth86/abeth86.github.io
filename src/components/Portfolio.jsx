@@ -46,7 +46,7 @@ export const Portfolio = React.createClass({
             <img className="skill-icon" src="/img/nodejs-min.png" />
           </div>
           <h4>GFW-Free Image Uploader</h4>
-          <p>Chimgur was the brainchild of endless tomfoolery by the Chinese GFW when attempting to use Imgur.  It's a simple image uploader that was built specifically for the subreddit /r/China on <a href="http://www.reddit.com">Reddit</a>.  Anyone can use it, however, as long as you have a Reddit username.  Check it out <a href="http://chimgur.herokuapp.com">here</a>!</p>
+          <p>Chimgur was the brainchild of endless tomfoolery by the Chinese GFW when attempting to use Imgur.  It's a simple image uploader that was built specifically for the subreddit /r/China on <a href="http://www.reddit.com">Reddit</a>.  Anyone can use it, however, as long as you have a Reddit username.  Check it out <a href="http://chimgur.azurewebsites.net">here</a>!</p>
         </Modal.Body>
       </Modal>
     )
