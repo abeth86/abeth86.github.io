@@ -8,14 +8,28 @@ import styles from 'styles/home'
 export const Home = React.createClass({
   mixins: [PureRenderMixin],
 
+  componentDidMount: function() {
+    console.log(this.props.transition)
+    setTimeout(() => {
+      this.props.startTransition(true)
+    }, 100)
+  },
+  componentWillUnmount: function() {
+    this.props.startTransition(false)
+  },
+  componentDidUpdate: function() {
+    console.log(this.props.transition)
+  },
+
   render: function() {
     const titleGridClass = 'col-xs-8 col-md-6 col-xs-offset-2 col-md-offset-3 s-home-title'
     const iconsGridClass = 'col-xs-10 col-md-6 col-xs-offset-1 col-md-offset-3 s-home-icons'
     const wideGridClass= 'col-xs-6 col-md-4 '
     const wideOffset = 'col-xs-offset-3 col-md-offset-2 '
+    const transitionClass = this.props.transition ? "component-loaded" : null
 
     return (
-      <div className="s-home">
+      <div className={"s-home " + transitionClass}>
         <div className="container">
           <div className="row">
             <div className={titleGridClass}>abethel.io</div>
@@ -46,7 +60,9 @@ export const Home = React.createClass({
 })
 
 function mapStateToProps(state) {
-  return {}
+  return {
+    transition: state.get('transition')
+  }
 }
 
 export const HomeContainer = connect(mapStateToProps, actionCreators)(Home)

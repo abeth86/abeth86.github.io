@@ -9,7 +9,11 @@
     background-size: 100%;
     background-position:center;
     background-repeat: no-repeat;
-    height: 250px;
+    height: 0px;
+    .transition(all .6s);
+    &.component-loaded {
+      height: 250px;
+    }
   }
   .about-mugshot {
     margin: -75px auto 0px;

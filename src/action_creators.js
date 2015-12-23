@@ -24,3 +24,10 @@ export function closeModal() {
     type: 'CLOSE_MODAL'
   }
 }
+
+export function startTransition(start) {
+  return {
+    type: 'START_TRANSITION',
+    start
+  }
+}

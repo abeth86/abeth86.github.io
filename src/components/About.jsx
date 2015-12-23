@@ -8,11 +8,21 @@ import {Col} from 'react-bootstrap'
 
 export const About = React.createClass({
   mixins: [PureRenderMixin],
+  componentDidMount: function() {
+    setTimeout(() => {
+      this.props.startTransition(true)
+    }, 100)
+  },
+  componentWillUnmount: function() {
+    this.props.startTransition(false)
+  },
 
   render: function() {
+    const transitionClass = this.props.transition ? "component-loaded" : null
+
     return (
       <div className="s-about">
-        <div className="about-top-img"></div>
+        <div className={"about-top-img " + transitionClass}></div>
         <div className="container">
           <div className="img-circle about-mugshot"></div>
           <div className="s-about-title">About Me</div>
@@ -51,7 +61,9 @@ export const About = React.createClass({
 })
 
 function mapStateToProps(state) {
-  return {}
+  return {
+    transition: state.get('transition')
+  }
 }
 
 export const AboutContainer = connect(mapStateToProps, actionCreators)(About)

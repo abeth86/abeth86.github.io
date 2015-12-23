@@ -1,7 +1,8 @@
 import {List, Map} from 'immutable'
 
 const initialState = Map({
-  selected: 'Home'
+  selected: 'Home',
+  transition: false
 })
 
 function setState(state, newState) {
@@ -20,6 +21,10 @@ function closeModal(state) {
   return state.remove('openedModal')
 }
 
+function startTransition(state, start) {
+  return state.set('transition', start)
+}
+
 export default function(state=initialState, action) {
   switch (action.type) {
     case 'SET_STATE':
@@ -30,6 +35,8 @@ export default function(state=initialState, action) {
       return openModal(state, action.modal)
     case 'CLOSE_MODAL':
       return closeModal(state)
+    case 'START_TRANSITION':
+      return startTransition(state, action.start)
   }
   return state
 }
