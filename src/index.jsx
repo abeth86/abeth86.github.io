@@ -9,6 +9,10 @@ import reducer from './reducer'
 import App from 'components/App'
 import {HomeContainer} from 'components/Home'
 import {AboutContainer} from 'components/About'
+import doge from 'dogefy'
+
+console.log("%cA doge, just for you!", "color: blue; font-style: italic")
+console.log(doge("super awesome portfolio"))
 
 let store = createStore(reducer)
 setState()
