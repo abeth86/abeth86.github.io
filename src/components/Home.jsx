@@ -30,11 +30,11 @@ export const Home = React.createClass({
           </div>
         </div>
         <div className="row">
-          <Col className="s-home-body" xs={6} md={4} xsOffset={3} mdOffset={2}>
+          <Col className="s-home-body" xs={10} md={4} xsOffset={1} mdOffset={2}>
             <h3 className="body-title">While You're Here</h3>
             <p className="body-text">Be sure to check out some of the projects on my github to get a feel for how I write code.  Read up about me in the about section.  You may even find a neat section about how this site was built!</p>
           </Col>
-          <Col className="s-home-body" xs={6} md={4} xsOffset={3} mdOffset={0}>
+          <Col className="s-home-body" xs={10} md={4} xsOffset={1} mdOffset={0}>
             <h3 className="body-title">Why Javascript?</h3>
             <p className="body-text">The icons are certainly loaded full of JS, and for good reason: I love it.  My wife would be upset if she found out, though, so maybe let's keep that between you and me.  Yeah?</p>
           </Col>
