@@ -1,11 +1,12 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import {TransitionMixin} from './mixins/TransitionMixin'
 import {connect} from 'react-redux'
 import * as actionCreators from '../action_creators'
 import {Col, Modal} from 'react-bootstrap'
 
 export const Portfolio = React.createClass({
-  mixins: [PureRenderMixin],
+  mixins: [PureRenderMixin, TransitionMixin],
 
   _openModal(e) {
     this.props.openModal(e.target.id)
@@ -15,6 +16,7 @@ export const Portfolio = React.createClass({
   },
 
   render() {
+    const transitionClass = this.props.transition ? "component-loaded" : null
 
     const wurlModal = (
       <Modal className="portfolio-modal" show={this.props.openedModal === "wurl"} onHide={this._closeModal}>
@@ -52,20 +54,22 @@ export const Portfolio = React.createClass({
     )
 
     return (
-      <div className="s-about-portfolio">
-        <h3 className="s-about-portfolio-title">Examples</h3>
-        <Col xs={12} md={6} className="s-about-portfolio-piece">
-          <img id="wurl" onClick={this._openModal} className="s-about-portfolio-img" src="/img/wurl-pic.jpg" />
-          <h4>Wurl</h4>
-          <h6>Expat Event Finder</h6>
-        </Col>
-        <Col xs={12} md={6} className="s-about-portfolio-piece">
-          <img id="chimgur" onClick={this._openModal} className="s-about-portfolio-img" src="/img/chimgur-pic.png" />
-          <h4>Chimgur</h4>
-          <h6>Simple Image Uploader for China</h6>
-        </Col>
-        {wurlModal}
-        {chimgurModal}
+      <div className={"s-about-portfolio " + transitionClass}>
+        <div className="container">
+          <h3 className="s-about-portfolio-title">Examples</h3>
+          <Col xs={12} md={6} className="s-about-portfolio-piece">
+            <img id="wurl" onClick={this._openModal} className="s-about-portfolio-img" src="/img/wurl-pic.jpg" />
+            <h4>Wurl</h4>
+            <h6>Expat Event Finder</h6>
+          </Col>
+          <Col xs={12} md={6} className="s-about-portfolio-piece">
+            <img id="chimgur" onClick={this._openModal} className="s-about-portfolio-img" src="/img/chimgur-pic.png" />
+            <h4>Chimgur</h4>
+            <h6>Simple Image Uploader for China</h6>
+          </Col>
+          {wurlModal}
+          {chimgurModal}
+        </div>
       </div>
     )
   }
@@ -73,7 +77,8 @@ export const Portfolio = React.createClass({
 
 function mapStateToProps(state) {
   return {
-    openedModal: state.get('openedModal')
+    openedModal: state.get('openedModal'),
+    transition: state.get('transition')
   }
 }
 

@@ -11,6 +11,9 @@ const initialState = Map({
     '/img/reactjs-min.png',
     '/img/angularjs-min.png',
     '/img/nodejs-min.png'
+  ],
+  workHistory: [
+    '/img/strikingly-min.png',
   ]
 })
 

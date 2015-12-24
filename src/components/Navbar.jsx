@@ -34,6 +34,7 @@ export const Navbar = React.createClass({
 
     const homeSelected = (this.props.selected === "home" ? style.selected : null)
     const aboutSelected = (this.props.selected === "about" ? style.selected : null)
+    const portfolioSelected = (this.props.selected === "portfolio" ? style.selected : null)
     const selectionOpacity = (this.props.selected === "about" ? style.notOpaque : null)
     const ifOpacityPresent = (selectionOpacity ? style.fontOverOpacity : null)
 
@@ -54,6 +55,9 @@ export const Navbar = React.createClass({
               </li>
               <li>
                 <a id="about" href="#/about" style={Object.assign({}, aboutSelected, ifOpacityPresent)} onClick={this._setSelected}>About</a>
+              </li>
+              <li>
+                <a id="portfolio" href="#/portfolio" style={Object.assign({}, portfolioSelected, ifOpacityPresent)} onClick={this._setSelected}>Portfolio</a>
               </li>
             </ul>
           </div>

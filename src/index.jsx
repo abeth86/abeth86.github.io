@@ -9,6 +9,7 @@ import reducer from './reducer'
 import App from 'components/App'
 import {HomeContainer} from 'components/Home'
 import {AboutContainer} from 'components/About'
+import {PortfolioContainer} from 'components/Portfolio'
 import doge from 'dogefy'
 
 console.log("%cA doge, just for you!", "color: blue; font-style: italic")
@@ -24,6 +25,7 @@ const history = createHistory({
 const routes = <Route component={App}>
   <Route path="/" component={HomeContainer} />
   <Route path="/about" component={AboutContainer} />
+  <Route path="/portfolio" component={PortfolioContainer} />
 </Route>
 
 ReactDOM.render(

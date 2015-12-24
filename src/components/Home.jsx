@@ -1,26 +1,13 @@
 import React from 'react'
-import $ from 'jquery'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import {TransitionMixin} from './mixins/TransitionMixin'
 import {connect} from 'react-redux'
 import * as actionCreators from '../action_creators'
 import styles from 'styles/home'
 import {Col} from 'react-bootstrap'
 
 export const Home = React.createClass({
-  mixins: [PureRenderMixin],
-
-  componentDidMount: function() {
-    console.log(this.props.transition)
-    setTimeout(() => {
-      this.props.startTransition(true)
-    }, 100)
-  },
-  componentWillUnmount: function() {
-    this.props.startTransition(false)
-  },
-  componentDidUpdate: function() {
-    console.log(this.props.transition)
-  },
+  mixins: [PureRenderMixin, TransitionMixin],
 
   render: function() {
     const icons = this.props.icons.map((icon, index) => {

@@ -1,0 +1,55 @@
+@import './helpers/vendor';
+
+.s-about-portfolio {
+  font-family: 'Raleway', sans-serif;
+  background: url(/img/portfolio-bg-min.jpg);
+  color: #fff;
+  margin-bottom: 70px;
+  margin-left: 2500px;
+  .transition(all .6s);
+  height: 100vh;
+  &.component-loaded {
+    margin-left: 0px;
+  }
+  .s-about-portfolio-title {
+    font-family: 'Oswald', sans-serif;
+    padding: 50px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+  .s-about-portfolio-piece {
+    text-align: center;
+    .s-about-portfolio-img {
+      width: 300px;
+      height: 150px;
+    }
+    img {
+      border: 3px solid gray;
+      border-radius: 10px;
+      cursor: hand;
+      cursor: pointer;
+    }
+  }
+}
+.portfolio-modal {
+  margin-top: 25vh;
+  .s-portfolio-icons {
+    margin-top: 10px;
+    text-align: center;
+    .skill-icon {
+      display: inline-block;
+      margin: 5px;
+      height: 40px;
+    }
+  }
+  .modal-title{
+    text-align: center;
+    .modal-img {
+      width: 50px;
+    }
+    .modal-img-long {
+      width: 250px;
+    }
+  }
+}

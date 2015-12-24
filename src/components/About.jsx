@@ -1,21 +1,14 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import {TransitionMixin} from './mixins/TransitionMixin'
 import {connect} from 'react-redux'
 import * as actionCreators from '../action_creators'
 import styles from 'styles/about'
-import {PortfolioContainer} from './Portfolio'
+import {WorkHistory} from './WorkHistory'
 import {Col} from 'react-bootstrap'
 
 export const About = React.createClass({
-  mixins: [PureRenderMixin],
-  componentDidMount: function() {
-    setTimeout(() => {
-      this.props.startTransition(true)
-    }, 100)
-  },
-  componentWillUnmount: function() {
-    this.props.startTransition(false)
-  },
+  mixins: [PureRenderMixin, TransitionMixin],
 
   render: function() {
     const transitionClass = this.props.transition ? "component-loaded" : null
@@ -53,7 +46,7 @@ export const About = React.createClass({
           </Col>
         </div>
         <div className="container">
-          <PortfolioContainer />
+          <WorkHistory workHistory={this.props.workHistory} />
         </div>
       </div>
     )
@@ -62,7 +55,8 @@ export const About = React.createClass({
 
 function mapStateToProps(state) {
   return {
-    transition: state.get('transition')
+    transition: state.get('transition'),
+    workHistory: state.get('workHistory')
   }
 }
 
