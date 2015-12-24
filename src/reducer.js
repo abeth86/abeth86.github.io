@@ -2,7 +2,16 @@ import {List, Map} from 'immutable'
 
 const initialState = Map({
   selected: 'Home',
-  transition: false
+  transition: false,
+  icons: [
+    '/img/html5-min.png',
+    '/img/css3-min.png',
+    '/img/less-min.png',
+    '/img/es6-min.png',
+    '/img/reactjs-min.png',
+    '/img/angularjs-min.png',
+    '/img/nodejs-min.png'
+  ]
 })
 
 function setState(state, newState) {

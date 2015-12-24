@@ -4,6 +4,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {connect} from 'react-redux'
 import * as actionCreators from '../action_creators'
 import styles from 'styles/home'
+import {Col} from 'react-bootstrap'
 
 export const Home = React.createClass({
   mixins: [PureRenderMixin],
@@ -22,37 +23,34 @@ export const Home = React.createClass({
   },
 
   render: function() {
-    const titleGridClass = 'col-xs-8 col-md-6 col-xs-offset-2 col-md-offset-3 s-home-title'
-    const iconsGridClass = 'col-xs-10 col-md-6 col-xs-offset-1 col-md-offset-3 s-home-icons'
-    const wideGridClass= 'col-xs-6 col-md-4 '
-    const wideOffset = 'col-xs-offset-3 col-md-offset-2 '
+    const icons = this.props.icons.map((icon, index) => {
+      return (
+        <img className="skill-icon" src={icon} key={"icon-" + index} />
+      )
+    })
     const transitionClass = this.props.transition ? "component-loaded" : null
 
     return (
       <div className={"s-home " + transitionClass}>
         <div className="container">
           <div className="row">
-            <div className={titleGridClass}>abethel.io</div>
-            <div className={iconsGridClass}>
-              <img className="skill-icon" src="/img/html5-min.png" />
-              <img className="skill-icon" src="/img/css3-min.png" />
-              <img className="skill-icon" src="/img/less-min.png" />
-              <img className="skill-icon" src="/img/es6-min.png" />
-              <img className="skill-icon" src="/img/reactjs-min.png" />
-              <img className="skill-icon" src="/img/angularjs-min.png" />
-              <img className="skill-icon" src="/img/nodejs-min.png" />
-            </div>
+            <Col className="s-home-title" xs={8} md={6} xsOffset={2} mdOffset={3}>
+              abethel.io
+            </Col>
+            <Col className="s-home-icons" xs={10} md={6} xsOffset={1} mdOffset={3}>
+              {icons}
+            </Col>
           </div>
         </div>
         <div className="row">
-          <div className={wideGridClass + wideOffset + "s-home-body"}>
+          <Col className="s-home-body" xs={6} md={4} xsOffset={3} mdOffset={2}>
             <h3 className="body-title">While You're Here</h3>
             <p className="body-text">Be sure to check out some of the projects on my github to get a feel for how I write code.  Read up about me in the about section.  You may even find a neat section about how this site was built!</p>
-          </div>
-          <div className={wideGridClass + "col-xs-offset-3 col-md-offset-0 s-home-body"}>
+          </Col>
+          <Col className="s-home-body" xs={6} md={4} xsOffset={3} mdOffset={0}>
             <h3 className="body-title">Why Javascript?</h3>
             <p className="body-text">The icons are certainly loaded full of JS, and for good reason: I love it.  My wife would be upset if she found out, though, so maybe let's keep that between you and me.  Yeah?</p>
-          </div>
+          </Col>
         </div>
       </div>
     )
@@ -61,7 +59,8 @@ export const Home = React.createClass({
 
 function mapStateToProps(state) {
   return {
-    transition: state.get('transition')
+    transition: state.get('transition'),
+    icons: state.get('icons')
   }
 }
 
