@@ -22,7 +22,7 @@ export const Navbar = React.createClass({
     const style = {
       selected: {
         borderBottom: '2px solid black',
-        color: 'red !important'
+        color: 'red'
       },
       notOpaque: {
         opacity: '0.6'
