@@ -7,22 +7,31 @@
   padding-bottom: 70px;
   margin-left: 2500px;
   .transition(all .6s);
-  height: 100vh;
+  min-height: 100vh;
   &.component-loaded {
     margin-left: 0px;
   }
   .s-about-portfolio-title {
+    margin-top: 75px;
     font-family: 'Oswald', sans-serif;
     padding: 50px;
     text-align: center;
     font-weight: 700;
     margin-bottom: 50px;
+    @media only screen and (max-width: 727px) {
+      padding: 50px 0px 0px 0px;
+    }
   }
   .s-about-portfolio-piece {
     text-align: center;
+    margin-bottom: 20px;
     .s-about-portfolio-img {
       width: 300px;
       height: 150px;
+      @media only screen and (max-width: 727px) {
+        width: 200px;
+        height: 100px;
+      }
     }
     img {
       border: 3px solid gray;
