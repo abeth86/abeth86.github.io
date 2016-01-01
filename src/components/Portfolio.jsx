@@ -31,7 +31,7 @@ export const Portfolio = React.createClass({
             <img className="skill-icon" src="/img/angularjs-min.png" />
           </div>
           <h4>All Aboard!</h4>
-          <p>Wurl is a prototype event finder for travelers in a foreign land.  It was built in just over a week, and remains hosted as an example of rapidly produced truly full-stack application.  Feel free to <a href="http://www.getwurl.com">play with it</a>!</p>
+          <p>Wurl is a prototype event finder for travelers in a foreign land.  It was built in just over a week, and remains hosted as an example of rapidly produced truly full-stack application.  Feel free to <a href="http://www.getwurl.com">play with it</a>, and run through the code <a href="http://github.com/abeth86/wurl">here</a>!</p>
         </Modal.Body>
       </Modal>
     )
