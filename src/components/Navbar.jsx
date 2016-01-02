@@ -59,6 +59,9 @@ export const Navbar = React.createClass({
               <li>
                 <a id="portfolio" href="#/portfolio" style={Object.assign({}, portfolioSelected, ifOpacityPresent)} onClick={this._setSelected}>Portfolio</a>
               </li>
+              <li>
+                <a id="resume" href="http://abethel.blob.core.windows.net/resume/my_resume.pdf" style={Object.assign({}, ifOpacityPresent)}>Resume</a>
+              </li>
             </ul>
           </div>
         </div>
