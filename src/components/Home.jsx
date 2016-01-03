@@ -3,7 +3,6 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {TransitionMixin} from './mixins/TransitionMixin'
 import {connect} from 'react-redux'
 import * as actionCreators from '../action_creators'
-import styles from 'styles/home'
 import {Col} from 'react-bootstrap'
 
 export const Home = React.createClass({
