@@ -2,7 +2,12 @@ import React from 'react'
 import {NavbarContainer} from './Navbar'
 
 export default React.createClass({
-  render: function() {
+  propTypes: {
+    location: React.PropTypes.object,
+    children: React.PropTypes.object
+  },
+
+  render: function () {
     return (
       <div>
         <NavbarContainer location={this.props.location.pathname}/>

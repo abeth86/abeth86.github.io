@@ -1,10 +1,10 @@
 export const TransitionMixin = {
-  componentDidMount: function() {
+  componentDidMount: function () {
     setTimeout(() => {
       this.props.startTransition(true)
     }, 100)
   },
-  componentWillUnmount: function() {
+  componentWillUnmount: function () {
     this.props.startTransition(false)
   }
 }

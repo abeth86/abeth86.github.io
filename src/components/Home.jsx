@@ -8,35 +8,39 @@ import {Col} from 'react-bootstrap'
 
 export const Home = React.createClass({
   mixins: [PureRenderMixin, TransitionMixin],
+  propTypes: {
+    icons: React.PropTypes.array,
+    transition: React.PropTypes.bool
+  },
 
-  render: function() {
+  render: function () {
     const icons = this.props.icons.map((icon, index) => {
       return (
-        <img className="skill-icon" src={icon} key={"icon-" + index} />
+        <img className='skill-icon' src={icon} key={'icon-' + index} />
       )
     })
-    const transitionClass = this.props.transition ? "component-loaded" : null
+    const transitionClass = this.props.transition ? 'component-loaded' : null
 
     return (
-      <div className={"s-home " + transitionClass}>
-        <div className="container">
-          <div className="row">
-            <Col className="s-home-title" xs={8} md={6} xsOffset={2} mdOffset={3}>
+      <div className={'s-home ' + transitionClass}>
+        <div className='container'>
+          <div className='row'>
+            <Col className='s-home-title' xs={8} md={6} xsOffset={2} mdOffset={3}>
               abethel.io
             </Col>
-            <Col className="s-home-icons" xs={10} md={6} xsOffset={1} mdOffset={3}>
+            <Col className='s-home-icons' xs={10} md={6} xsOffset={1} mdOffset={3}>
               {icons}
             </Col>
           </div>
         </div>
-        <div className="row">
-          <Col className="s-home-body" xs={10} md={4} xsOffset={1} mdOffset={2}>
-            <h3 className="body-title">While You're Here</h3>
-            <p className="body-text">Be sure to check out some of the projects on my github to get a feel for how I write code.  Read up about me in the about section.  You may even find a neat section about how this site was built!</p>
+        <div className='row'>
+          <Col className='s-home-body' xs={10} md={4} xsOffset={1} mdOffset={2}>
+            <h3 className='body-title'>While You're Here</h3>
+            <p className='body-text'>Be sure to check out some of the projects on my github to get a feel for how I write code.  Read up about me in the about section.  You may even find a neat section about how this site was built!</p>
           </Col>
-          <Col className="s-home-body" xs={10} md={4} xsOffset={1} mdOffset={0}>
-            <h3 className="body-title">Why Javascript?</h3>
-            <p className="body-text">The icons are certainly loaded full of JS, and for good reason: I love it.  My wife would be upset if she found out, though, so maybe let's keep that between you and me.  Yeah?</p>
+          <Col className='s-home-body' xs={10} md={4} xsOffset={1} mdOffset={0}>
+            <h3 className='body-title'>Why Javascript?</h3>
+            <p className='body-text'>The icons are certainly loaded full of JS, and for good reason: I love it.  My wife would be upset if she found out, though, so maybe let's keep that between you and me.  Yeah?</p>
           </Col>
         </div>
       </div>
@@ -44,7 +48,7 @@ export const Home = React.createClass({
   }
 })
 
-function mapStateToProps(state) {
+function mapStateToProps (state) {
   return {
     transition: state.get('transition'),
     icons: state.get('icons')

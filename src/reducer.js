@@ -1,4 +1,4 @@
-import {List, Map} from 'immutable'
+import {Map} from 'immutable'
 
 const initialState = Map({
   selected: 'Home',
@@ -13,31 +13,31 @@ const initialState = Map({
     '/img/nodejs-min.png'
   ],
   workHistory: [
-    '/img/strikingly-min.png',
+    '/img/strikingly-min.png'
   ]
 })
 
-function setState(state, newState) {
+function setState (state, newState) {
   return state.merge(newState)
 }
 
-function setSelected(state, selected) {
+function setSelected (state, selected) {
   return state.set('selected', selected)
 }
 
-function openModal(state, modal) {
+function openModal (state, modal) {
   return state.set('openedModal', modal)
 }
 
-function closeModal(state) {
+function closeModal (state) {
   return state.remove('openedModal')
 }
 
-function startTransition(state, start) {
+function startTransition (state, start) {
   return state.set('transition', start)
 }
 
-export default function(state=initialState, action) {
+export default function (state = initialState, action) {
   switch (action.type) {
     case 'SET_STATE':
       return setState(state, action.state)

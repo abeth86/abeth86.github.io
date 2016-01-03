@@ -12,8 +12,8 @@ import {AboutContainer} from 'components/About'
 import {PortfolioContainer} from 'components/Portfolio'
 import doge from 'dogefy'
 
-console.log("%cA doge, just for you!", "color: blue; font-style: italic")
-console.log(doge("super awesome portfolio"))
+console.log('%cA doge, just for you!', 'color: blue; font-style: italic')
+console.log(doge('super awesome portfolio'))
 
 let store = createStore(reducer)
 setState()
@@ -23,9 +23,9 @@ const history = createHistory({
 })
 
 const routes = <Route component={App}>
-  <Route path="/" component={HomeContainer} />
-  <Route path="/about" component={AboutContainer} />
-  <Route path="/portfolio" component={PortfolioContainer} />
+  <Route path='/' component={HomeContainer} />
+  <Route path='/about' component={AboutContainer} />
+  <Route path='/portfolio' component={PortfolioContainer} />
 </Route>
 
 ReactDOM.render(
