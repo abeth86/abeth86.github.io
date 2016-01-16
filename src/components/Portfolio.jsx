@@ -64,12 +64,12 @@ export const Portfolio = React.createClass({
         <div className='container'>
           <h3 className='s-about-portfolio-title'>Examples</h3>
           <Col xs={12} md={6} className='s-about-portfolio-piece'>
-            <img id='wurl' onClick={this._openModal} className='s-about-portfolio-img' src='/img/wurl-pic.jpg' />
+            <div id='wurl' className='s-about-portfolio-window' onClick={this._openModal}></div>
             <h4>Wurl</h4>
             <h6>Expat Event Finder</h6>
           </Col>
           <Col xs={12} md={6} className='s-about-portfolio-piece'>
-            <img id='chimgur' onClick={this._openModal} className='s-about-portfolio-img' src='/img/chimgur-pic.png' />
+            <div id='chimgur' className='s-about-portfolio-window' onClick={this._openModal}></div>
             <h4>Chimgur</h4>
             <h6>Simple Image Uploader for China</h6>
           </Col>
