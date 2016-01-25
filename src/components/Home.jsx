@@ -35,7 +35,7 @@ export const Home = React.createClass({
         <div className='row'>
           <Col className='s-home-body' xs={10} md={4} xsOffset={1} mdOffset={2}>
             <h3 className='body-title'>While You're Here</h3>
-            <p className='body-text'>Be sure to check out some of the projects on my github to get a feel for how I write code.  Read up about me in the about section.  Most importantly, though, go through my repositories!</p>
+            <p className='body-text'>Be sure to check out some of the projects on my github to get a feel for how I write code.  Read up about me in the about section.  If you find a project you'd like to contribute to, don't be bashful - make that pr!</p>
           </Col>
           <Col className='s-home-body' xs={10} md={4} xsOffset={1} mdOffset={0}>
             <h3 className='body-title'>Why Javascript?</h3>
