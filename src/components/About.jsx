@@ -31,17 +31,17 @@ export const About = React.createClass({
           <Col xs={12} md={8} mdOffset={2} className='s-about-body'>
             <ul className='social-media'>
               <li>
-                <a href='http://github.com/abeth86'>
+                <a href='http://github.com/awitherspoon'>
                   <i className='fa fa-github-alt'></i>
                 </a>
               </li>
               <li>
-                <a href='http://www.google.com/+AndrewBethel1986'>
+                <a href='https://plus.google.com/u/0/111701562505143445889'>
                   <i className='fa fa-google-plus'></i>
                 </a>
               </li>
               <li>
-                <a href='http://www.linkedin.com/in/abethel86'>
+                <a href='http://www.linkedin.com/in/awitherspoon86'>
                   <i className='fa fa-linkedin fa-fw'></i>
                 </a>
               </li>

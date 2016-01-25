@@ -27,6 +27,8 @@
     "chai": "^3.4.1",
     "chai-immutable": "^1.5.3",
     "css-loader": "^0.23.0",
+    "history": "^1.17.0",
+    "immutable": "^3.7.6",
     "jsdom": "^7.0.2",
     "json-loader": "^0.5.4",
     "less": "^2.5.3",

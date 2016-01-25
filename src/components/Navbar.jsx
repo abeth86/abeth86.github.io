@@ -46,7 +46,7 @@ export const Navbar = React.createClass({
     return (
       <nav className='navbar navbar-color' style={selectionOpacity} role='navigation'>
         <div className='container'>
-          <a className='navbar-brand' href='#/' onClick={this._setSelected}>Andrew Bethel</a>
+          <a className='navbar-brand' href='#/' onClick={this._setSelected}>Andrew Witherspoon</a>
           <button type='button' className='navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1'>
             <span className='sr-only'>Toggle navigation</span>
             <span className='icon-bar'></span>
@@ -63,9 +63,6 @@ export const Navbar = React.createClass({
               </li>
               <li>
                 <a id='portfolio' href='#/portfolio' style={Object.assign({}, portfolioSelected, ifOpacityPresent)} onClick={this._setSelected}>Portfolio</a>
-              </li>
-              <li>
-                <a id='resume' target='_blank' href='http://abethel.blob.core.windows.net/resume/my_resume.pdf' style={Object.assign({}, ifOpacityPresent)}>Resume</a>
               </li>
             </ul>
           </div>
