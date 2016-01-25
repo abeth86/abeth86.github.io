@@ -26,7 +26,7 @@ export const About = React.createClass({
         <div className='container'>
           <Col xs={12} md={8} mdPush={2} className='s-about-body'>
             <p>I'm a talented programmer with an increasingly diverse skillset. I've worked with applications built on a number of different stacks, and I am familiar with many of the modern libraries used in web development.  These days I primarily use javascript to develop web applications.</p>
-            <p>Feel free to find me through any of the social media links below, and don't forget to peruse my github repositories!  Some are older, some are newer, and there's a number of different tech stacks being used.  Read more about how this particular page came to be <a href='https://medium.com/@abeth86/building-out-my-github-page-343f0434da95#.ot8ga8xao'>here</a>.</p>
+            <p>Feel free to find me through any of the social media links below, and don't forget to peruse my github repositories!  Some are older, some are newer, and there's a number of different tech stacks being used.  To see the code behind this website, check out <a href='http://github.com/awitherspoon/awitherspoon.github.io'>the repository</a>!</p>
           </Col>
           <Col xs={12} md={8} mdOffset={2} className='s-about-body'>
             <ul className='social-media'>
