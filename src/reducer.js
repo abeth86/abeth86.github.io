@@ -14,6 +14,32 @@ const initialState = Map({
   ],
   workHistory: [
     '/img/strikingly-min.png'
+  ],
+  gists: [
+    {
+      id: 'awitherspoon/585b46eba5990af8bd24',
+      title: 'FizzBuzz in JS'
+    },
+    {
+      id: 'awitherspoon/c19d1a241477251c65e4',
+      title: 'FizzBuzz in C#'
+    },
+    {
+      id: 'awitherspoon/05286c61b90a23de3615',
+      title: 'Array flattening'
+    },
+    {
+      id: 'awitherspoon/3463cf48710b4570e712',
+      title: 'Only once'
+    },
+    {
+      id: 'awitherspoon/d2aa3e660c8211ca26ba',
+      title: 'Visible nodes'
+    },
+    {
+      id: 'awitherspoon/4b292d4d19f01d8975b6',
+      title: 'Factorials with memoization'
+    }
   ]
 })
 

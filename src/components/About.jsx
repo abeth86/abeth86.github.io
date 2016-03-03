@@ -5,12 +5,14 @@ import {connect} from 'react-redux'
 import * as actionCreators from '../action_creators'
 import {WorkHistory} from './WorkHistory'
 import {Col} from 'react-bootstrap'
+import {GistEmbed} from './GistEmbed'
 
 export const About = React.createClass({
   mixins: [PureRenderMixin, TransitionMixin],
   propTypes: {
     transition: React.PropTypes.bool,
-    workHistory: React.PropTypes.array
+    workHistory: React.PropTypes.array,
+    gists: React.PropTypes.array
   },
 
   render: function () {
@@ -48,6 +50,24 @@ export const About = React.createClass({
             </ul>
           </Col>
         </div>
+        <div className='divider'></div>
+        <div className='container'>
+          <div className='gist-title-container'>
+            <div className='s-about-title'>Code Snippets</div>
+            <div className='gist-subheader'>I'll let the code speak for itself.</div>
+          </div>
+            {
+              this.props.gists.map((gist, index) => {
+                return (<Col xs={12} md={12} className='github-gist'>
+                  <div key={index}>
+                    <div className='gist-title'>{gist.title}</div>
+                    <GistEmbed gist={gist.id} />
+                  </div>
+                </Col>)
+              })
+            }
+        </div>
+        <div className='divider'></div>
         <div className='container'>
           <WorkHistory workHistory={this.props.workHistory} />
         </div>
@@ -59,7 +79,8 @@ export const About = React.createClass({
 function mapStateToProps (state) {
   return {
     transition: state.get('transition'),
-    workHistory: state.get('workHistory')
+    workHistory: state.get('workHistory'),
+    gists: state.get('gists')
   }
 }
 
