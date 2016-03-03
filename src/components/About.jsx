@@ -58,11 +58,9 @@ export const About = React.createClass({
           </div>
             {
               this.props.gists.map((gist, index) => {
-                return (<Col xs={12} md={12} className='github-gist'>
-                  <div key={index}>
+                return (<Col xs={12} md={12} className='github-gist' key={index}>
                     <div className='gist-title'>{gist.title}</div>
                     <GistEmbed gist={gist.id} />
-                  </div>
                 </Col>)
               })
             }

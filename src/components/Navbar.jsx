@@ -3,6 +3,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {connect} from 'react-redux'
 import * as actionCreators from '../action_creators'
 import styles from 'styles/base'
+import $ from 'jquery'
 
 export const Navbar = React.createClass({
   mixins: [PureRenderMixin],
@@ -15,6 +16,12 @@ export const Navbar = React.createClass({
   componentWillMount: function () {
     const selected = this.props.location === '/' ? 'home' : this.props.location.replace('/', '')
     this.props.setSelected(selected)
+  },
+
+  componentDidMount: function () {
+    $('.navbar-collapse ul li a').click(() => {
+      $('.navbar-toggle:visible').click()
+    })
   },
 
   _setSelected: function (e) {
