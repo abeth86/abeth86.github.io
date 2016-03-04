@@ -1,4 +1,5 @@
 var path = require('path')
+var webpack = require('webpack')
 var nodeModulesPath = path.resolve(__dirname, 'node_modules')
 var buildPath = path.resolve(__dirname, 'dist')
 var mainPath = path.resolve(__dirname, 'src', 'index.jsx')
@@ -24,6 +25,7 @@ var config = {
       }
     ]
   },
+  plugins: [new webpack.DefinePlugin({'process.env.NODE_ENV': '"development"'})],
   resolve: {
     extensions: ['', '.js', '.jsx', '.less'],
     alias: {
