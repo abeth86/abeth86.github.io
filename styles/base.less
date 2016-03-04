@@ -24,6 +24,7 @@ body {
   border: none;
   border-radius: 0px;
   font-weight: 400;
+  .transition(all .5s);
   &.navbar-color {
     box-shadow: 0 0 4px rgba(0, 0, 0, .2);
   }
@@ -47,6 +48,9 @@ body {
         border-bottom: none !important;
       }
     }
+  }
+  &:hover {
+    opacity: 1 !important;
   }
 }
 .navbar-toggle {
