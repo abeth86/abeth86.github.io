@@ -38,7 +38,7 @@ export const Navbar = React.createClass({
       },
       notOpaque: {
         opacity: '0.6',
-        color: 'red'
+        color: 'red !important'
       },
       fontOverOpacity: {
         color: 'black'
