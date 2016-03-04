@@ -5,6 +5,7 @@
 
 body {
   overflow-x: hidden;
+  width: 100vw;
 }
 
 .row {
@@ -14,10 +15,10 @@ body {
 
 .navbar {
   position: fixed;
+  width: 100%;
   width: 100vw !important;
   top: 0px;
   z-index: 5;
-  width: 100%;
   background: #fff;
   margin-bottom: 1.5px;
   font-family: 'Oswald', sans-serif;
@@ -51,6 +52,14 @@ body {
     }
   }
   &:hover {
+    opacity: 1 !important;
+    li {
+      a {
+        color: gray;
+      }
+    }
+  }
+  @media only screen and (max-width: 727px) {
     opacity: 1 !important;
     li {
       a {

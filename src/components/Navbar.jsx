@@ -25,7 +25,6 @@ export const Navbar = React.createClass({
   },
 
   _setSelected: function (e) {
-    console.log(e.target.id)
     const selected = e.target.innerText === 'Andrew Bethel' ? 'home' : e.target.id
     this.props.setSelected(selected)
   },
@@ -41,7 +40,7 @@ export const Navbar = React.createClass({
         color: 'red !important'
       },
       fontOverOpacity: {
-        color: 'black'
+        color: 'gray'
       }
     }
 
