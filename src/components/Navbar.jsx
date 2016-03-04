@@ -37,7 +37,8 @@ export const Navbar = React.createClass({
         color: 'red'
       },
       notOpaque: {
-        opacity: '0.6'
+        opacity: '0.6',
+        color: 'red'
       },
       fontOverOpacity: {
         color: 'black'
@@ -66,7 +67,7 @@ export const Navbar = React.createClass({
                 <a id='home' href='#/' style={Object.assign({}, homeSelected, ifOpacityPresent)} onClick={this._setSelected}>Home</a>
               </li>
               <li>
-                <a id='about' href='#/about' style={Object.assign({}, aboutSelected, ifOpacityPresent)} onClick={this._setSelected}>About</a>
+                <a id='about' href='#/about' style={Object.assign({}, ifOpacityPresent, aboutSelected)} onClick={this._setSelected}>About</a>
               </li>
               <li>
                 <a id='portfolio' href='#/portfolio' style={Object.assign({}, portfolioSelected, ifOpacityPresent)} onClick={this._setSelected}>Portfolio</a>
