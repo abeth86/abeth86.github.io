@@ -1,6 +1,7 @@
 @import './about';
 @import './home';
 @import './portfolio';
+@import './helpers/vendor';
 
 body {
   overflow-x: hidden;
@@ -41,9 +42,31 @@ body {
   }
 }
 .navbar-toggle {
-  border: 1px solid black;
-  border-radius: 3px;
+  border: none;
+  background: transparent;
   .icon-bar {
     background: black;
+    .transition(all .6s);
+    &.top-bar {
+      transform: rotate(45deg);
+      transform-origin: 10% 10%;
+    }
+    &.middle-bar {
+      opacity: 0;
+    }
+    &.bottom-bar {
+      transform: rotate(-45deg);
+      transform-origin: 10% 90%;
+    }
+  }
+  &.collapsed {
+    .icon-bar {
+      &.top-bar, &.bottom-bar {
+        transform: rotate(0);
+      }
+      &.middle-bar {
+        opacity: 1;
+      }
+    }
   }
 }

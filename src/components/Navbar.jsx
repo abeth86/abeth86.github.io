@@ -56,9 +56,9 @@ export const Navbar = React.createClass({
           <a className='navbar-brand' href='#/' onClick={this._setSelected}>Andrew Witherspoon</a>
           <button type='button' className='navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1'>
             <span className='sr-only'>Toggle navigation</span>
-            <span className='icon-bar'></span>
-            <span className='icon-bar'></span>
-            <span className='icon-bar'></span>
+            <span className='icon-bar top-bar'></span>
+            <span className='icon-bar middle-bar'></span>
+            <span className='icon-bar bottom-bar'></span>
           </button>
           <div id='bs-example-navbar-collapse-1' className='collapse navbar-collapse'>
             <ul className='nav navbar-nav navbar-right'>
