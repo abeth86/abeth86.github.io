@@ -43,6 +43,10 @@ const initialState = Map({
     {
       id: 'awitherspoon/4b292d4d19f01d8975b6',
       title: 'Factorials with memoization'
+    },
+    {
+      id: 'awitherspoon/85c78b58f4b0c803899f',
+      title: 'Flood fill in ruby'
     }
   ]
 })
