@@ -25,6 +25,10 @@ const initialState = Map({
       title: 'FizzBuzz in C#'
     },
     {
+      id: 'awitherspoon/2dc855bbf4903d677cfc',
+      title: 'FizzBuzz in Ruby'
+    },
+    {
       id: 'awitherspoon/05286c61b90a23de3615',
       title: 'Array flattening'
     },
