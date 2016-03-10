@@ -29,3 +29,16 @@
   background-image: linear-gradient(top, @startColor, @endColor);
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor));
 }
+
+.vertical-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.override-vertical-center {
+  top: auto;
+  -webkit-transform: none;
+  transform: none;
+}

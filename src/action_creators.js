@@ -31,3 +31,10 @@ export function startTransition (start) {
     start
   }
 }
+
+export function activateTicker (ticker) {
+  return {
+    type: 'START_TICKER',
+    ticker
+  }
+}

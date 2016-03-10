@@ -6,6 +6,7 @@ import * as actionCreators from '../action_creators'
 import {WorkHistory} from './WorkHistory'
 import {Col} from 'react-bootstrap'
 import {GistEmbed} from './GistEmbed'
+import CountTo from 'react-count-to'
 
 export const About = React.createClass({
   mixins: [PureRenderMixin, TransitionMixin],
@@ -50,7 +51,36 @@ export const About = React.createClass({
             </ul>
           </Col>
         </div>
-        <div className='divider'></div>
+        <div className='divider'>
+          <Col xs={12} sm={12} md={3} className='ticker-title'>My Stats</Col>
+          <Col xs={4} sm={4} md={3} className='ticker'>
+            <div className='ticker-icon'>
+              <i className='fa fa-coffee'></i>
+              <span className='ticker-number'>
+                <CountTo to={99999} speed={9000} />
+              </span>
+            </div>
+            <h3>Cups of Coffee</h3>
+          </Col>
+          <Col xs={4} sm={4} md={3} className='ticker'>
+            <div className='ticker-icon'>
+              <i className='fa fa-code'></i>
+              <span className='ticker-number'>
+                <CountTo to={9002} speed={6000} />
+              </span>
+            </div>
+            <h3>Lines of Code</h3>
+          </Col>
+          <Col xs={4} sm={4} md={3} className='ticker'>
+            <div className='ticker-icon'>
+              <i className='fa fa-child'></i>
+              <span className='ticker-number'>
+                <CountTo to={-3} speed={2000} />
+              </span>
+            </div>
+            <h3>Error Free Days</h3>
+          </Col>
+        </div>
         <div className='container'>
           <div className='gist-title-container'>
             <div className='s-about-title'>Code Snippets</div>
@@ -65,7 +95,16 @@ export const About = React.createClass({
               })
             }
         </div>
-        <div className='divider'></div>
+        <div className='divider'>
+          <Col xs={12} md={12} className='resume'>
+            <div className='res-button'>
+              <a href="/andrew_resume.pdf" className='btn btn-default btn-resume'>
+                <i className='fa fa-cloud-download icon-before'></i>
+                Get CV
+              </a>
+            </div>
+          </Col>
+        </div>
         <div className='container'>
           <WorkHistory workHistory={this.props.workHistory} />
         </div>
