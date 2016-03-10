@@ -57,7 +57,7 @@ export const About = React.createClass({
             <div className='ticker-icon'>
               <i className='fa fa-coffee'></i>
               <span className='ticker-number'>
-                <CountTo to={99999} speed={9000} />
+                <CountTo to={99999} speed={6000} delay={70} />
               </span>
             </div>
             <h3>Cups of Coffee</h3>
@@ -66,7 +66,7 @@ export const About = React.createClass({
             <div className='ticker-icon'>
               <i className='fa fa-code'></i>
               <span className='ticker-number'>
-                <CountTo to={9002} speed={6000} />
+                <CountTo to={9002} speed={6000} delay={85} />
               </span>
             </div>
             <h3>Lines of Code</h3>
@@ -75,7 +75,7 @@ export const About = React.createClass({
             <div className='ticker-icon'>
               <i className='fa fa-child'></i>
               <span className='ticker-number'>
-                <CountTo to={-3} speed={2000} />
+                <CountTo to={-3} speed={6000} />
               </span>
             </div>
             <h3>Error Free Days</h3>
