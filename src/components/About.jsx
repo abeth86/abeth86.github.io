@@ -98,7 +98,7 @@ export const About = React.createClass({
         <div className='divider'>
           <Col xs={12} md={12} className='resume'>
             <div className='res-button'>
-              <a href="/andrew_resume.pdf" className='btn btn-default btn-resume'>
+              <a href="/dist/andrew_resume.pdf" className='btn btn-default btn-resume'>
                 <i className='fa fa-cloud-download icon-before'></i>
                 Get CV
               </a>
