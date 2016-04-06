@@ -44,7 +44,7 @@ export const About = React.createClass({
                 </a>
               </li>
               <li>
-                <a href='http://www.linkedin.com/in/awitherspoon86'>
+                <a href='https://www.linkedin.com/in/aswitherspoon86'>
                   <i className='fa fa-linkedin fa-fw'></i>
                 </a>
               </li>
