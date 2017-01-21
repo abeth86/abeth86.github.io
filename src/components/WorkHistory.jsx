@@ -10,8 +10,8 @@ export const WorkHistory = React.createClass({
     const previousJobs = this.props.workHistory.map((job, index) => {
       return (
         <div key={'job-history-' + index}>
-          <img className='previous-job' src={job} />
-          <h6>Strikingly - Front End Engineer</h6>
+          <img className='previous-job' src={job.src} />
+          <h6>{`${job.company} - ${job.role}`}</h6>
         </div>
       )
     })

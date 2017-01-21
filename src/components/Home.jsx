@@ -5,14 +5,26 @@ import {connect} from 'react-redux'
 import * as actionCreators from '../action_creators'
 import {Col} from 'react-bootstrap'
 
-export const Home = React.createClass({
-  mixins: [PureRenderMixin, TransitionMixin],
-  propTypes: {
+export class Home extends React.Component {
+  static propTypes = {
     icons: React.PropTypes.array,
     transition: React.PropTypes.bool
-  },
+  }
 
-  render: function () {
+  constructor(props) {
+    super(props)
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.props.startTransition(true)
+    }, 100)
+  }
+  componentWillUnmount() {
+    this.props.startTransition(false)
+  }
+
+  render() {
     const icons = this.props.icons.map((icon, index) => {
       return (
         <img className='skill-icon' src={icon} key={'icon-' + index} />
@@ -45,7 +57,7 @@ export const Home = React.createClass({
       </div>
     )
   }
-})
+}
 
 function mapStateToProps (state) {
   return {

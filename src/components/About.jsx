@@ -8,15 +8,28 @@ import {Col} from 'react-bootstrap'
 import {GistEmbed} from './GistEmbed'
 import CountTo from 'react-count-to'
 
-export const About = React.createClass({
-  mixins: [PureRenderMixin, TransitionMixin],
-  propTypes: {
+export class About extends React.Component {
+  static propTypes = {
     transition: React.PropTypes.bool,
     workHistory: React.PropTypes.array,
     gists: React.PropTypes.array
-  },
+  }
 
-  render: function () {
+  constructor(props) {
+    super(props)
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.props.startTransition(true)
+    }, 100)
+  }
+
+  componentWillUnmount() {
+    this.props.startTransition(false)
+  }
+
+  render() {
     const transitionClass = this.props.transition ? 'component-loaded' : null
 
     return (
@@ -111,7 +124,7 @@ export const About = React.createClass({
       </div>
     )
   }
-})
+}
 
 function mapStateToProps (state) {
   return {

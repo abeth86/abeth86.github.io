@@ -13,7 +13,16 @@ const initialState = Map({
     '/img/nodejs-min.png'
   ],
   workHistory: [
-    '/img/strikingly-min.png'
+    {
+      src: '/img/strikingly-min.png',
+      company: 'Strikingly',
+      role: 'Front End Engineer'
+    },
+    {
+      src: '/img/hardin.png',
+      company: 'HardinDD',
+      role: 'Lead Javascript Engineer'
+    }
   ],
   gists: [
     {
@@ -47,6 +56,10 @@ const initialState = Map({
     {
       id: 'awitherspoon/85c78b58f4b0c803899f',
       title: 'Flood fill in ruby'
+    },
+    {
+      id: 'awitherspoon/fb57d3ed66135282f72b7faa02081943',
+      title: 'Postfix notation'
     }
   ]
 })
