@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+module.exports = `<!DOCTYPE html>
 <html>
 <head>
   <title>awitherspoon.io</title>
@@ -16,3 +16,4 @@
   <script src="/bundle.js"></script>
 </body>
 </html>
+`
