@@ -37,7 +37,7 @@ export class Home extends React.Component {
         <div className='container'>
           <div className='row'>
             <Col className='s-home-title' xs={8} md={6} xsOffset={2} mdOffset={3}>
-              awitherspoon.io
+              awitherspoon.net
             </Col>
             <Col className='s-home-icons' xs={10} md={6} xsOffset={1} mdOffset={3}>
               {icons}
