@@ -11,7 +11,7 @@ var express = require('express')
     console.log('sending html')
     res.send(html)
   })
-  const port = process.env.NODE_ENV === 'production' ? 80 : 3000
+  const port = process.env.NODE_ENV === 'production' ? process.env.PORT : 3000
   const webServer = app.listen(port, () => {
     console.log(`Application running on port ${port}`)
   })
