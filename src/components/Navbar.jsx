@@ -1,35 +1,39 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {connect} from 'react-redux'
-import * as actionCreators from '../action_creators'
+import {setSelected} from '../action_creators'
 import styles from 'styles/base'
 import $ from 'jquery'
 
-export const Navbar = React.createClass({
-  mixins: [PureRenderMixin],
-  propTypes: {
+export class Navbar extends React.Component {
+  static propTypes = {
     location: React.PropTypes.string,
     selected: React.PropTypes.string,
     setSelected: React.PropTypes.func
-  },
+  }
 
-  componentWillMount: function () {
+  constructor(props) {
+    super(props)
+    this._setSelected = ::this._setSelected
+  }
+
+  componentWillMount() {
     const selected = this.props.location === '/' ? 'home' : this.props.location.replace('/', '')
     this.props.setSelected(selected)
-  },
+  }
 
-  componentDidMount: function () {
+  componentDidMount() {
     $('.navbar-collapse ul li a').click(() => {
       $('.navbar-toggle:visible').click()
     })
-  },
+  }
 
-  _setSelected: function (e) {
+  _setSelected(e) {
     const selected = e.target.innerText === 'Andrew Bethel' ? 'home' : e.target.id
     this.props.setSelected(selected)
-  },
+  }
 
-  render: function () {
+  render() {
     const style = {
       selected: {
         borderBottom: '2px solid black',
@@ -77,7 +81,7 @@ export const Navbar = React.createClass({
       </nav>
     )
   }
-})
+}
 
 function mapStateToProps (state) {
   return {
@@ -85,4 +89,4 @@ function mapStateToProps (state) {
   }
 }
 
-export const NavbarContainer = connect(mapStateToProps, actionCreators)(Navbar)
+export const NavbarContainer = connect(mapStateToProps, {setSelected})(Navbar)
