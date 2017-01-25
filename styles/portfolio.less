@@ -38,15 +38,24 @@
       box-shadow: inset 0px 1px 13px 5px rgba(0,0,0,0.95);
       cursor: hand;
       cursor: pointer;
+      .transition(all .8s);
       @media only screen and (max-width: 727px) {
         width: 200px;
         height: 100px;
       }
       &#wurl {
         background-image: url('/img/wurl-pic.jpg');
+        &:hover {
+          width: 350px;
+          height: 200px;
+        }
       }
       &#chimgur {
-        background-image: url('/img/chimgur-pic.png')
+        background-image: url('/img/chimgur-pic.png');
+        &:hover {
+          width: 350px;
+          height: 200px;
+        }
       }
     }
     .s-about-portfolio-img {
