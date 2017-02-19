@@ -42,6 +42,7 @@ export class About extends React.Component {
         <div className='container'>
           <Col xs={12} md={8} mdPush={2} className='s-about-body'>
             <p>I'm a talented programmer with an increasingly diverse skillset. I've worked with applications built on a number of different stacks, and I am familiar with many of the modern libraries used in web development.  These days I primarily use javascript to develop web applications.</p>
+            <p>Prior to my return to the United States, I wrote and sold bespoke training applications to English training centers across China.  This allowed for quicker, and more readily understandable, training for newly arrived foreign staff.  This was the genesis of my career, back in 2011.</p>
             <p>Feel free to find me through any of the social media links below, and don't forget to peruse my github repositories!  Some are older, some are newer, and there's a number of different tech stacks being used.  To see the code behind this website, check out <a href='http://github.com/awitherspoon/awitherspoon.github.io'>the repository</a>!</p>
           </Col>
           <Col xs={12} md={8} mdOffset={2} className='s-about-body'>
