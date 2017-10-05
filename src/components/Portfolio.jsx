@@ -37,7 +37,7 @@ export const Portfolio = React.createClass({
             <img className='skill-icon' src='/img/angularjs-min.png' />
           </div>
           <h4>All Aboard!</h4>
-          <p>Wurl is a prototype event finder for travelers in a foreign land.  It was built in just over a week as a fun time waster, and remains hosted as an example of a rapidly produced, truly full-stack application.  Feel free to <a href='http://www.getwurl.com'>play with it</a>, and run through the code <a href='http://github.com/awitherspoon/wurl'>here</a>!</p>
+          <p>Wurl is a prototype event finder for travelers in a foreign land.  It was built in just over a week as a fun time waster, and remains hosted as an example of a rapidly produced, truly full-stack application.  Feel free to <a href='http://wurld.azurewebsites.net/'>play with it</a>, and run through the code <a href='http://github.com/awitherspoon/wurl'>here</a>!</p>
         </Modal.Body>
       </Modal>
     )
@@ -54,7 +54,7 @@ export const Portfolio = React.createClass({
             <img className='skill-icon' src='/img/nodejs-min.png' />
           </div>
           <h4>GFW-Free Image Uploader</h4>
-          <p>Chimgur was the brainchild of endless tomfoolery by the Chinese GFW when attempting to use Imgur.  It's a simple image uploader that was built specifically for the subreddit /r/China on <a href='http://www.reddit.com'>Reddit</a>.  Anyone can use it, however, as long as you have a Reddit username.  Check it out <a href='http://chimgur.herokuapp.com'>here</a>!</p>
+          <p>Chimgur was the brainchild of endless tomfoolery by the Chinese GFW when attempting to use Imgur.  It's a simple image uploader that was built specifically for the subreddit /r/China on <a href='http://www.reddit.com'>Reddit</a>.  Anyone can use it, however, as long as you have a Reddit username.  Check it out <a href='http://chimgur.com'>here</a>!</p>
         </Modal.Body>
       </Modal>
     )
